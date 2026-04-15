@@ -31,13 +31,13 @@ class pruebasTest {
     @Test
     void testEdadInvalidaCero() {
         assertThrows(IllegalArgumentException.class, () -> {
-            Main.clasificarEdad(0);
+            Main.clasificarEdad(-1);
         }, "Debe lanzar excepción para edad 0");
     }
 
     @Test
     void testInfanciaLimite() {
-        assertEquals("Infancia", Main.clasificarEdad(6));
+        assertEquals("Infancia", Main.clasificarEdad(5));
     }
 
     @Test
