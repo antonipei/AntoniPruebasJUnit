@@ -95,7 +95,7 @@ public class Main {
         String j1 = jugador1.toUpperCase();
         String j2 = jugador2.toUpperCase();
 
-        // Validar jugadas permitidas [cite: 182, 192]
+        // Validar jugadas permitidas
         if (!esValida(j1) || !esValida(j2)) {
             throw new IllegalArgumentException("Jugada no válida");
         }
@@ -105,7 +105,7 @@ public class Main {
             return "EMPATE";
         }
 
-        // Lógica de resolución [cite: 187, 188, 190]
+        // Lógica de resolución
         if ((j1.equals("PIEDRA") && j2.equals("TIJERA")) ||
                 (j1.equals("TIJERA") && j2.equals("PAPEL")) ||
                 (j1.equals("PAPEL") && j2.equals("PIEDRA"))) {
